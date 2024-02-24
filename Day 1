@@ -1,0 +1,50 @@
+DAY 1      
+
+## FUNCTIONS AND BUILT-IN FUNCTIONS:
+
+Function = a block of code which is executed only when it is called
+
+1. def keyword
+2. function name
+3. parentheses and colon
+
+example of a function that prints a given name parameter:
+
+*def* hello(*name*):
+
+    print("hello "+*name*) 
+
+   print("have a nice day")hello("uzoma") 
+
+### built-in functions:
+
+1. abs = gives the absolute value of  numbers like (-9), (-100.98)
+2. all() = this tells if all objects in an iterable are true
+3. bin() = this gives the binary form of a given number
+4. filter() = this filters through values in an iterable
+    
+    these are just a few of the in-built functions we have in python
+    
+    ### LAMBDAS:
+    
+    lambda functions can be thought of as disposable functions. They can have any number of arguments but only have one expression.
+    
+    syntax:
+    
+    lambda <arguments>: <expression> 
+    
+    ```jsx
+    double = *lambda* x:x * 2
+    ```
+    
+    ```jsx
+    multiply = *lambda* x,y:x * y
+    ```
+    
+    ```jsx
+    full_name = *lambda* firstname, lastname:firstname+" "+lastname
+    ```
+    
+    ```jsx
+    age_check = *lambda* age: *True if* age >= 18 *else False*
+    ```
