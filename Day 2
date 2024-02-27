@@ -1,0 +1,80 @@
+# OOP CONCEPTS:
+
+## CLASSES:
+
+# Think of a class as a blueprint that describes what attributes and methods our objects will have.
+
+### The __init__() method:
+
+known as the constructor, this helps us construct objects in our classes.
+
+### OBJECTS:
+
+An object *is* an instance of a *class*.
+
+a *class* typically contains :
+
+1. attributes:   What an object *is or* has
+
+2. methods:   what an object can do
+
+### CLASS VARIABLES:
+
+These are declared inside the class but outside the constructor
+
+```python
+class Cars:
+
+    wheels = 2
+
+    def __init__(self,make,model,year,color):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.color = color
+
+wheels here are called class variables
+```
+
+### INSTANCE VARIABLES:
+
+These are declared inside the constructor
+
+```python
+  def __init__(self,make,model,year,color):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.color = color
+```
+
+**For class variables, if they are changed later down the line, the change will affect all instances of the variable.**
+
+## INHERITANCE:
+
+This is where a child class inherits all methods and attributes from it’s parent class.
+
+```python
+class Animal:
+
+		alive = True
+
+		def eat(self):
+				print("This animal is eating")
+
+			
+		def sleep(self):
+				print("This animal is sleeping")
+
+Class Rabbit(Animal):
+		pass
+Class fish(Animal):
+		pass
+Class Hawk(Animal):
+		pass
+
+rabbit, fish and hawk(children) are inheriting from the Animal class(parent)
+
+```
+
+### MULTI-LEVEL INHERITANCE:
