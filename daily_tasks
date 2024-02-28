@@ -30,3 +30,48 @@ account1.check_balance()  # Should display "Current balance for John's account: 
 account1.withdraw(50)
 account1.check_balance()  # Should display "Current balance for John's account: 50"
 account1.withdraw(70)     # Should display "Insufficient funds!"
+
+
+[EXERCISE 3]
+"""Create a Python class called Employee to represent employees in a company. The class should have:
+
+Instance variables to store the employee's name, salary, and employment year.
+Methods to:
+Initialize the employee with a given name, salary, and employment year.
+Calculate the number of years the employee has been with the company (based on the current year).
+Apply a salary raise by a certain percentage.
+Print out the employee's information, including their name, current salary, and years of employment.
+After defining the class, create a few instances of the Employee class and test its methods by calculating years of employment,
+ applying salary raises, and printing out employee information."""
+
+
+#[EXERCISE 2]
+class Employee:
+
+    def __init__(self, name, salary, emp_year):
+        self.name = name
+        self.salary = salary
+        self.emp_year = emp_year
+
+
+    def salary_raise1(self, raise1 = 1.5):
+        return self.salary * raise1
+
+
+    def salary_raise2(self, raise2 = 2.5):
+        return self.salary * raise2
+
+
+    def salary_raise3(self, raise3 = 7.5):
+        return self.salary * raise3
+
+
+    def employment_yrs(self, new_year):
+        new_year = 2024 - self.emp_year
+
+
+employee1 = Employee("uzoma", 100000, 2012)
+
+print(employee1.salary_raise1())
+print(employee1.salary_raise2())
+print(employee1.salary_raise3())
