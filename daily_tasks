@@ -1,0 +1,32 @@
+class BankAccount:
+    def __init__(self, owner, balance=0):
+        # Initialize owner's name and balance
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount):
+        # Deposit funds into the account
+        self.balance += amount
+        print(f"Deposited {amount} into {self.owner}'s account.")
+
+    def withdraw(self, amount):
+        # Withdraw funds from the account
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"Withdrew {amount} from {self.owner}'s account.")
+        else:
+            print("Insufficient funds!")
+
+    def check_balance(self):
+        # Check the current balance
+        print(f"Current balance for {self.owner}'s account: {self.balance}")
+
+# Test your class
+# Create instances and test methods
+account1 = BankAccount("John")
+account1.check_balance()  # Should display "Current balance for John's account: 0"
+account1.deposit(100)
+account1.check_balance()  # Should display "Current balance for John's account: 100"
+account1.withdraw(50)
+account1.check_balance()  # Should display "Current balance for John's account: 50"
+account1.withdraw(70)     # Should display "Insufficient funds!"
