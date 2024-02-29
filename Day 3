@@ -1,1 +1,57 @@
-pass
+## @STATICMETHODS:
+
+Static methods are methods in a class that do not require access to the instance of the class.
+
+Basically they can’t access other methods (class methods included ) and are basically independent.
+
+example:
+
+```python
+@staticmethod
+def bark(n):
+	for _ in range(n):
+		print("Bark !")
+```
+
+Static methods are used in cases like creating imports 
+
+### CLASS METHODS:
+
+they receive the class as their first argument instead of the instance (self).
+
+These are created by simply adding the @classmethod decorator
+
+```python
+@classmethod
+def set_raise_amt(cls, amount):
+		pass
+
+cls is used in place of class since class is a reserved word in python
+
+			emp_str_1 = 'John-Doe-70000'
+			emp_str_2 = 'Steve-Smith-30000'
+			emp_str_3 = 'Jane-Doe-90000'
+
+  @classmethod
+    def from_string(cls, emp_str):
+        first, last, pay = emp_str.split('-')
+        return cls(first, last, pay)
+
+print(new_emp_1.email)
+print(new_emp_1.pay)
+
+```
+
+when using a class method, we do not need to create an object to access the method
+
+```python
+class uzoma:
+
+Dogs = []
+
+@classmethod
+def dogs(cls):
+	return len(Dogs)
+
+print(cls.dogs) *you don't need to create an object to access the dog method*
+```
