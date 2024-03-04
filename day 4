@@ -1,1 +1,72 @@
-pass
+## MODULES:
+
+A module is a file containing python code. It may contain classes, functions etc.
+
+They are imported in order to gain access to their various functions & classes
+
+```python
+import messages
+impot messages as m
+from messages import hello, bye
+```
+
+some important modules to know for:
+
+### a. Web development:
+
+1. requests: they are used to send HTTP requests with ease
+2. Django
+3. flask
+
+### b. Data science:
+
+1. NumPy: used to perform an assortment of mathematical operations
+2. Pandas: great for working with data frames and data in general
+3. matplotlib: used for data visualisations i.e. plots, charts etc
+4. OpenCV-python: used for image and video data processing i.e. facial recognition, object recognition.
+
+### c. GUI:
+
+1. kivy
+2. PyQt5
+
+special mention: PyGame: used to create simple games 
+
+## ABSTRACT CLASSES:
+
+Abstract classes prevent users from creating an object if the class
+
+abstract class = a class which contains one or more abstract methods
+
+abstract method = a method that has a declaration but no implementation
+
+```python
+from abc import ABC, abstractmethod	
+
+class vehicle(ABC):
+		@abstractmethod
+		def go(self):
+			pass
+
+		@absractmethod
+		def stop
+			pass
+
+	class Car:
+		def go(self):
+			print("You drive the car")
+
+		def stop(self)
+			print("this car is stopped")
+
+	class Motorcycle:
+		def go(self):
+			print("You ride the motorcycle")
+
+		def stop(self)
+			print("this motorcycle is stopped")
+
+```
+
+- When a class has at least one abstract method in it, it becomes an abstract class
+- They are also used to compel a user to override abstract methods in a child class
