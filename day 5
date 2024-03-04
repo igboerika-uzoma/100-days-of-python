@@ -1,1 +1,72 @@
-pass
+## SORT, MAP AND FILTER:
+
+### SORT:
+
+This sorts through iterables 
+
+```python
+students = ["uzoma", "spongebob", "squidward", "sandy", "jelato", "stephanie"]
+students.sort()
+
+**for reverse sorting**
+- students.sort(reverse=True)
+```
+
+- the sort method is used for lists only. Other iterables would have to make use of the sort function.
+
+```python
+students = ("uzoma", "spongebob", "squidward", "sandy", "jelato", "stephanie")
+
+sorted_students = sorted(students)
+
+**for reversed**
+sorted_students = sorted(students, reverse=True)
+```
+
+Key keyword in sorting:
+
+in the case of a list of tuples, we can sort them using the key keyword arguments.
+
+### MAP:
+
+- This applies a function to each item in an iterable
+
+***syntax***:
+
+map(function, iterable )
+
+```python
+store = [('shirt',20.00),
+					('pants',25.00),
+					('jackets',50.00),
+					('socks',10.00)]
+
+to_euros = lambda data:(data[0],data[1]*0.82) #this fuunction returns the prices of the items in euros
+
+store_euros = list(map(to_euros, store))
+
+for i in store_euros:
+		print(i)
+```
+
+ 
+
+### FILTER:
+
+This creates a collection of elements from an iterable for which a function returns true
+
+**syntax:**
+
+**filter( function, iterable)**
+
+```python
+friends = [('uzoma',21),
+					('Grace',18),
+					('Dave',20),
+					('Chima',18),
+					('Onochie',22),]
+
+age = lambda data:data[1] >= 18
+
+filter(age, friends)
+```
