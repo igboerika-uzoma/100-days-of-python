@@ -75,3 +75,50 @@ employee1 = Employee("uzoma", 100000, 2012)
 print(employee1.salary_raise1())
 print(employee1.salary_raise2())
 print(employee1.salary_raise3())
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+[[ DAY 6 ]]
+"""write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative.
+ If the array doesn't contain any numbers then you can return 0"""
+
+uzoma = [12,34,23,56,21,10]
+onochie = []
+chizzy = [-1,200,32,-18]
+
+def add_array(x):
+    new_arr = sum(x)
+    print(new_arr)
+
+    if x ==[]:
+        print("this array is empty")
+
+add_array(uzoma)
+add_array(onochie)
+add_array(chizzy)
+
+..................................................................................................................
+
+"""Write a Python program that takes a list of strings representing numbers (e.g., ['1', '2', '3']) and converts
+each string to its corresponding integer value using the map() function. Then, print the resulting list of integers."""
+
+string_numbers = ['1', '2', '3']
+
+integer_numbers = list(map(int, string_numbers))
+
+print(integer_numbers)
+....................................................................................................................
+
+"""Write a Python program that takes a list of numbers and uses the filter() function to filter out all the 
+even numbers from the list. Then, print the resulting list containing only the odd numbers."""
+
+
+users = [10,23,43,44,64,57,59,80,117,234,478,576,1001]
+#To select even numbers
+even_numbers = lambda x:x%2==0
+#printing out even numbers
+print(list(filter(even_numbers, users)))
+
+-----------------------------------------------------------------------------------------------------------------------
+
