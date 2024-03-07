@@ -1,1 +1,36 @@
-pass
+- [x]  METHOD OVERRIDING
+- [x]  METHOD CHAINING
+- [x]  OBJECTS AS ARGUMENTS
+
+### **METHOD CHAINING**:
+
+This is calling multiple methods sequentially on the same object. Each call performs an action on the object and returns self.
+
+What this basically means is that the methods are chained when they are being called (altogether)
+
+```python
+class Car:
+    color = None
+
+class Motorcycle:
+    color = None
+
+def change_color(car,color):
+    car.color = color
+
+car_1 = Car()
+car_2 = Car()
+car_3 = Car()
+
+motorcycle_1 = Motorcycle()
+
+change_color(car_1, "red")
+change_color(car_2, "green")
+change_color(car_3, "black")
+change_color(motorcycle_1, "violet")
+
+print(car_1.color)
+print(car_2.color)
+print(car_3.color)
+
+```
