@@ -1,1 +1,38 @@
-pass
+
+BUTTONS:
+These are your average buttons in TKinter.
+
+Functions can also be attached to the buttons by use of the command option 
+
+```python
+mybutton = Button(window,
+                  text="click me!!",
+                  bg='dark green',
+                  fg='white',
+                  command=myclick(),
+                  state=DISABLED)
+
+mybutton.pack()
+```
+
+**NB**: when calling functions in command, don’t put the parentheses. 
+
+### INPUT FIELDS:
+
+These allow you to enter text.
+
+```python
+def myclick():
+    hello = "Hello "+ e.get()
+    mylabel = Label(window, text=hello)
+    mylabel.pack()
+
+e = Entry(window,
+          width=50,
+          name="name",
+          relief=RAISED,
+          )
+e.pack()
+```
+
+Retrieving text from the input fields can be done with the help of the .get() method.
