@@ -1,0 +1,97 @@
+- [ ]  progress bar 📊
+- [ ]  Grid 🏢
+- [ ]  keyboard and mouse events ⌨️ 🖱️
+
+  **USING THE GRID SYSTEM IN TKINTER**:
+
+This organizes widgets in a table-like structure.
+
+| ——————— | Column 0 | Column 1  | Column 2 |
+| --- | --- | --- | --- |
+| Row 0 | r0, c0 | r0, c1 | r0, c2 |
+| Row 1 | r1,c0 | r1, c1 | r1, c2 |
+| Row 2 | r2, c0 | r2, c1 | r2, c2 |
+
+**Columnspan**: This allows your widget to take up more than one column.
+
+```python
+window = Tk()
+
+firstnamelabel = Label(window, text='First Name', fg='red').grid(row=0, column=0)
+firstname = Entry(window, borderwidth=9).grid(row=0, column=1)
+
+lastnamelabel = Label(window, text='Last Name', fg='red').grid(row=1, column=0)
+lastname = Entry(window, borderwidth=9,).grid(row=1, column=1)
+
+emaillabel = Label(window, text='Email', fg='red').grid(row=2, column=0)
+email = Entry(window, borderwidth=9).grid(row=2, column=1)
+
+submitbtn = Button(window, text='submit here', fg='green', bg='black',activeforeground='green', activebackground='yellow' ).grid(row=3, column=1)
+
+window.mainloop()
+
+
+**KEYBOARD EVENTS:**
+
+We can bind a key event and function to a window or widget.
+
+This is done using the bind( ) function
+
+ 
+
+### bind( ):
+
+ This function takes two parameters namely the event and a function
+
+```python
+window = Tk()
+
+def doSomething(event):
+    print("you did a thing")
+
+window.bind("<Return>", doSomething)
+
+window.mainloop()
+
+```
+
+**NB**: The function being called must have one parameter which is “event”
+
+**NB**: To apply the function to all keys, you use “<Key>”
+
+```python
+window = Tk()
+def dosomething(event):
+    label.config(text=event.keysym)
+
+window.bind("<Key>",dosomething)
+
+label = Label(window,
+              font=('Arial', 100))
+
+label.pack()
+window.mainloop()
+```
+
+**MOUSE EVENTS:**
+
+Mouse events are similar to keyboard events the only difference is that the events are caused by the clicking of the mouse
+
+```python
+windows = Tk()
+
+def dosomething(event):
+    print("you did this!!!")
+
+windows.bind("<Button-1>", dosomething) #left mouse click
+windows.bind("<Button-3>", dosomething) #right mouse click
+windows.bind("<Button-2>", dosomething) #scroll wheel click
+
+windows.mainloop()
+```
+
+Other mouse bindings include:
+
+- **<”ButtonRelease”>** : **This triggers the event upon the release of the button.**
+- **<”Enter”> : This triggers the event as soon as the cursor enters the window.**
+- **<”motion”> : This triggers the event as long as the mouse is in motion.**
